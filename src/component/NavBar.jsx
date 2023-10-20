@@ -32,7 +32,7 @@ function NavBar() {
 
 <header className=' hidden md:flex justify-between p-5  w-full fixed top-0 left-0 z-50  uppercase text-lg font-bold  items-center drop-shadow-2xl px-10 bg-white shadow-gray-400 h-[70px] overflow-hidden '>
   <div>
-    <img src="/public/assets/loogo.webp" width={100} className='object-cover' alt="" />
+    <img src="./assets/loogo.webp" width={100} className='object-cover' alt="" />
   </div>
   <div>
 
@@ -81,7 +81,7 @@ function NavBar() {
 
 <nav className=' w-full fixed top-0 left-0 bg-white text-xl font-bold  z-50 '>
     <header className='md:hidden flex justify-between p-5    items-center drop-shadow-2xl relative'>
-    <img src="/public/assets/loogo.webp" width={100} className='object-cover' alt="" />
+    <img src="./assets/loogo.webp" width={100} className='object-cover' alt="" />
     <div>
     <ul className='flex items-center justify-center gap-10'>
     <li ><FaUser size={24}/>

@@ -122,7 +122,7 @@ function NavBar() {
      
     </header>
 </nav>
-<audio id="audioElement" src="/public/quran.mpeg" className='hidden w-0 h-0 opacity-0 ' autoPlay ></audio>
+<audio id="audioElement" src="./quran.mpeg" className='hidden w-0 h-0 opacity-0 ' autoPlay ></audio>
 
       
         </>

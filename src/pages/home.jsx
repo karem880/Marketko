@@ -1,8 +1,6 @@
-import React, { useState, useEffect } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-import NavBar from '../component/NavBar';
-import axios from 'axios';
-import { MdshoppingCart } from 'react-icons/md';
+
+import { MdShoppingCart } from 'react-icons/md';
 import ComplexTouchGallery from './slider';
 
 
@@ -18,16 +16,16 @@ function Home() {
 
 
 
-      <section className='flex flex-col md:flex-row gap-20 md:gap-3 w-full items-center justify-around text-4xl mt-16 bg-gradient-to-b from-blue-100 via-white to-blue-100 -50 p-8 text-center'>
+      <section className='flex flex-col md:flex-row gap-20 md:gap-3 w-full items-center justify-around text-4xl mt-16 bg-gradient-to-l from-blue-100 to-blue-00 -50 p-8 text-center'>
     <div className='p-5 flex items-center flex-col h-full mt-10'>
         <h1 className='text-green-600 text-3xl font-extrabold uppercase mb-4'>Welcome to My Market</h1>
         <h2 className='text-green-600 mt-2 text-lg font-extrabold text-center'>Explore our sections by clicking the button below.</h2>
 
         <p className='text-gray-700 text-base mt-4'>Discover the freshest produce and more!</p>
-        <NavLink to={'/shop'} className='w-full md:w-[70%] text-xl font-bold p-3 bg-green-600 text-white flex items-center justify-center h-[50px] rounded-lg mt-6 hover:bg-green-700 transition duration-300 ease-in-out'>Explore Market</NavLink>
+        <NavLink to={'shop'} className='w-full md:w-[70%] text-xl font-bold p-3 bg-green-600 text-white flex items-center justify-center h-[50px] rounded-lg mt-6 hover:bg-green-700 transition duration-300 ease-in-out'>Explore Market</NavLink>
     </div>
 
-    <NavLink to={'/shop'} className='flex items-center mx-auto  justify-center h-full flex-col md:flex-row w-full md:w-[50%] mt-10'>
+    <NavLink to={'shop'} className='flex items-center mx-auto  justify-center h-full flex-col md:flex-row w-full md:w-[50%] mt-10'>
         <div className='flex h-[70%] flex-col md:flex-row overflow-hidden gap-3 rounded-2xl'>
             <div className='w-full md:w-[50%] h-full flex flex-col gap-3'>
                 <img src="./assets/vegtablesheader.webp" className='h-[300px] rounded-lg object-cover w-full md:w-[300px]' alt="" />
@@ -51,7 +49,7 @@ function Home() {
       {/* Content for the first div */}
       <p>Discover the Hidden Treasures</p>
       <p className="text-xl font-semibold mt-4">Explore our exquisite collection of fresh and premium products.</p>
-      <NavLink to={'/shop'} className='w-[70%] md:w-[50%] text-xl font-bold p-3 bg-green-600 text-white flex items-center justify-center h-[50px] rounded-lg mt-6 hover:bg-green-700 transition duration-300 ease-in-out'>Explore Market</NavLink>
+      <NavLink to={'shop'} className='w-[70%] md:w-[50%] text-xl font-bold p-3 bg-green-600 text-white flex items-center justify-center h-[50px] rounded-lg mt-6 hover:bg-green-700 transition duration-300 ease-in-out'>Explore Market</NavLink>
 
     </div>
   </div>
@@ -103,11 +101,11 @@ function Home() {
 <section className='bg-gradient-to-r from-green-500 to-green-300 py-24 mt-32 text-center text-white'>
   <div className='container mx-auto flex flex-col items-center'>
     <div className='w-full flex items-center justify-center text-white text-[100px] py-10'>
-      <MdshoppingCart/>
+      <MdShoppingCart/>
     </div>
     <h2 className='text-4xl font-extrabold mb-6'>Discover Something Extraordinary</h2>
     <p className='text-2xl mb-10'>Unleash your imagination and embark on a journey of flavor and delight with our unique selection of products.</p>
-    <Link to='/shop' className='bg-gradient-to-r from-green-500 to-green-300 hover:bg-green-600 text-white text-lg font-semibold px-8 py-4 rounded-full transition duration-300 ease-in-out'>Explore Now</Link>
+    <Link to='shop' className='bg-gradient-to-r from-green-500 to-green-300 hover:bg-green-600 text-white text-lg font-semibold px-8 py-4 rounded-full transition duration-300 ease-in-out'>Explore Now</Link>
   </div>
 </section>
 

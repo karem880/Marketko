@@ -1,7 +1,6 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import { FaBolt, FaEye, FaHeart, FaRegStar, FaShoppingCart, FaStar } from 'react-icons/fa';
-import NavBar from '../component/NavBar';
+import  { useEffect, useState } from 'react';
+import { FaEye, FaHeart, FaRegStar, FaShoppingCart, FaStar } from 'react-icons/fa';
 import { NavLink } from 'react-router-dom';
 
 function Shop() {

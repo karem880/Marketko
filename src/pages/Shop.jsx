@@ -11,7 +11,7 @@ function Shop() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get("/src/data/db.json");
+        const response = await axios.get("../src/data/db.json");
         setData(response.data);
       } catch (error) {
         console.error('حدث خطأ أثناء جلب البيانات:', error);

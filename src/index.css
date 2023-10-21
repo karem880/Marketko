@@ -58,6 +58,158 @@
     font-size: 18px;
     margin-top: 8px;
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+  :root {
+    --hue: 223;
+    --bg: hsl(var(--hue),10%,90%);
+    --fg: hsl(var(--hue),10%,10%);
+    --primary: #f17900;
+    --trans-dur: 0.3s;
+    font-size: 16px;
+  }
+
+  .preloader1 {
+    text-align: center;
+    max-width: 20em;
+    width: 100%;
+  }
+  .preloader1__text {
+    position: relative;
+    height: 1.5em;
+  }
+  .preloader1__msg {
+    animation: msg 0.3s 13.7s linear forwards;
+    position: absolute;
+    width: 100%;
+  }
+  .preloader1__msg--last {
+    animation-direction: reverse;
+    animation-delay: 14s;
+    visibility: hidden;
+  }
+  .cart {
+    display: block;
+    margin: 0 auto 1.5em auto;
+    width: 8em;
+    height: 8em;
+  }
+  .cart__lines,
+  .cart__top,
+  .cart__wheel1,
+  .cart__wheel2,
+  .cart__wheel-stroke {
+    animation: cartLines 2s ease-in-out infinite;
+  }
+  .cart__lines {
+    stroke: var(--primary);
+  }
+  .cart__top {
+    animation-name: cartTop;
+  }
+  .cart__wheel1 {
+    animation-name: cartWheel1;
+    transform: rotate(-0.25turn);
+    transform-origin: 43px 111px;
+  }
+  .cart__wheel2 {
+    animation-name: cartWheel2;
+    transform: rotate(0.25turn);
+    transform-origin: 102px 111px;
+  }
+  .cart__wheel-stroke {
+    animation-name: cartWheelStroke
+  }
+  .cart__track {
+    stroke: hsla(var(--hue),10%,10%,0.1);
+    transition: stroke var(--trans-dur);
+  }
+  
+  /* Dark theme */
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: hsl(var(--hue),10%,10%);
+      --fg: hsl(var(--hue),10%,90%);
+    }
+    .cart__track {
+      stroke: hsla(var(--hue),10%,90%,0.1);
+    }
+  }
+  
+  /* Animations */
+  @keyframes msg {
+    from {
+      opacity: 1;
+      visibility: visible;
+    }
+    99.9% {
+      opacity: 0;
+      visibility: visible;
+    }
+    to {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+  @keyframes cartLines {
+    from,
+    to {
+      opacity: 0;
+    }
+    8%,
+    92% {
+      opacity: 1;
+    }
+  }
+  @keyframes cartTop {
+    from {
+      stroke-dashoffset: -338;
+    }
+    50% {
+      stroke-dashoffset: 0;
+    }
+    to {
+      stroke-dashoffset: 338;
+    }
+  }
+  @keyframes cartWheel1 {
+    from {
+      transform: rotate(-0.25turn);
+    }
+    to {
+      transform: rotate(2.75turn);
+    }
+  }
+  @keyframes cartWheel2 {
+    from {
+      transform: rotate(0.25turn);
+    }
+    to {
+      transform: rotate(3.25turn);
+    }
+  }
+  @keyframes cartWheelStroke {
+    from,
+    to {
+      stroke-dashoffset: 81.68;
+    }
+    50% {
+      stroke-dashoffset: 40.84;
+    }
+  }
+
+
   .loader1 {
     width: 32px;
     height: 90px;
@@ -72,7 +224,7 @@
     background-position: center 20px , center 2px;
     background-repeat: no-repeat;
     box-sizing: border-box;
-    animation: animloader1Back 1s linear infinite alternate;
+    animation: animloader1Back 3s linear infinite alternate;
   }
   .loader1::before {
     content: '';  
@@ -101,8 +253,7 @@
     background-size: 100px 100px;
     box-shadow: 4px 4px 12px 0px rgba(255, 61, 0, 0.5);
     box-sizing: border-box;
-    animation: animloader1 1s linear infinite alternate;
-    color: #f0f0f0;
+    animation: animloader1 3s linear infinite alternate;
   }
   
   @keyframes animloader1Back {
@@ -140,52 +291,35 @@
 
 
 
-  .loader1 {
-    position: relative;
-    width: 120px;
-    height: 90px;
-    margin: 0 auto;
-  }
-  .loader1:before {
-    content: "";
-    position: absolute;
-    bottom: 30px;
-    left: 50px;
-    height: 30px;
-    width: 30px;
-    border-radius: 50%;
-    background: #FF3D00;
-    animation: loading-bounce 0.5s ease-in-out infinite alternate;
-  }
-  .loader1:after {
-    content: "";
-    position: absolute;
-    right: 0;
-    top: 0;
-    height: 7px;
-    width: 45px;
-    border-radius: 4px;
-    box-shadow: 0 5px 0 #fff, -35px 50px 0 #fff, -70px 95px 0 #fff;
-    animation: loading-step 1s ease-in-out infinite;
-  }
 
-  @keyframes loading-bounce {
-    0% { transform: scale(1, 0.7)}
-    40% { transform: scale(0.8, 1.2)}
-    60% { transform: scale(1, 1)}
-    100% { bottom: 140px }
+
+
+
+
+
+
+  .loader2 {
+    position: relative;
+    width: 48px;
+    height: 48px;
   }
-  @keyframes loading-step {
-    0% {
-      box-shadow: 0 10px 0 rgba(0,0,0,0),
-                  0 10px 0 #fff,
-                -35px 50px 0 #fff,
-                -70px 90px 0 #fff;
-    }
-    100% {
-      box-shadow: 0 10px 0 #fff,
-                -35px 50px 0 #fff,
-                -70px 90px 0 #fff,
-                -70px 90px 0 rgba(0,0,0,0);
-    }
+  .loader2:before,
+  .loader2:after {
+    content:"";
+    display: block;
+    border: 32px solid transparent;
+    border-top-color: #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+    animation: weld-rotate 1.5s infinite ease-in;
+  }
+  .loader2:before {
+    border-color: transparent  transparent transparent #FF3D00;
+    animation-delay: 0.5s;
+  }
+  @keyframes weld-rotate {
+    0% , 25% {transform: rotate(0deg)}
+    50% , 75% {transform: rotate(180deg)}
+    100% {transform: rotate(360deg)}
   }

@@ -31,8 +31,11 @@ function Shop() {
   };
 
   if (!data.products) {
-    return <div className='w-full bg-slate-800 h-[100vh] flex items-center flex-col justify-center'> 
-<span className="loader"></span>    </div>;
+    return <div className='w-full bg-slate-700 h-[100vh] flex items-center flex-col justify-center'> 
+<span className="loader1"> 
+</span> 
+<span className="loader2 mt-52"></span>
+   </div>;
   }
 
   const categories = Object.keys(data.products);
@@ -47,25 +50,25 @@ function Shop() {
 
   return (
     <>
-    <div className="container mt-24 mx-auto p-4">
+    <div className="container mt-32 md:mt-24 mx-auto p-4">
       <div className="mb-4 flex flex-col md:flex-row items-center justify-around w-full">
-        <div className='flex md:flex-row flex-col w-full md:w-[25%] items-center'>
-        <label htmlFor="category" className="block text-green-700 font-extrabold">Select Category:</label>
+        <div className='flex md:flex-row flex-col w-full justify-center gap-6 md:gap-0  md:w-[35%] items-center'>
+        <label htmlFor="category" className="block text-green-500 text-2xl font-extrabold">Select Category:</label>
         <select
           id="category"
           value={selectedCategory}
           onChange={(e) => handleCategoryChange(e.target.value)}
-          className="bg-white border border-green-500 rounded px-4 py-2 w-full mb-5 md:mb-0 md:w-[90%]"
+          className="bg-white border border-green-400 rounded px-4 py-2 w-full mb-5 md:mb-0 md:w-[90%]"
         >
           <option value="all">All</option>
           {categories.map((cat) => (
-            <option key={cat} value={cat}>
+            <option  className='text-green-500 fom' key={cat} value={cat}>
               {cat}
             </option>
           ))}
         </select>
         </div>
-        <div className="  w-full md:w-[70%] border-[1.5px] border-green-500 active:border-none  rounded-md outline-none ">
+        <div className="  w-full md:w-[60%] border-[1.5px] border-green-500 active:border-none  rounded-md outline-none ">
         <input
           type="text"
           placeholder="Search products"

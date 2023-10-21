@@ -32,7 +32,7 @@ function NavBar() {
 
 <header className=' hidden md:flex justify-between p-5  w-full fixed top-0 left-0 z-50  uppercase text-lg font-bold  items-center drop-shadow-2xl px-10 bg-white shadow-gray-400 h-[70px] overflow-hidden '>
   <div>
-    <img src="./assets/loogo.webp" width={100} className='object-cover' alt="" />
+    <img src="./assets/logo.png" width={100} className='object-cover' alt="" />
   </div>
   <div>
 
@@ -81,7 +81,7 @@ function NavBar() {
 
 <nav className=' w-full fixed top-0 left-0 bg-white text-xl font-bold  z-50 '>
     <header className='md:hidden flex justify-between p-5    items-center drop-shadow-2xl relative'>
-    <img src="./assets/loogo.webp" width={100} className='object-cover' alt="" />
+    <img src="./assets/logo.png" width={100} className='object-cover' alt="" />
     <div>
     <ul className='flex items-center justify-center gap-10'>
     <li ><FaUser size={24}/>
@@ -108,11 +108,11 @@ function NavBar() {
          <ul className="absolute bottom-[-184px]  h-[200px] flex flex-col justify-center gap-5 items-start text-xl left-0 w-full p-5  text-white bg-green-500  z-50" >
  
   <div>
-    <ul className=''>
-      <li className='text-white mt-5 w-full text-center hover:scale-110 duration-1000 flex items-center justify-center font-extrabold'>home</li>
-      <li className='text-white mt-5 w-full text-center hover:scale-110 duration-1000 flex items-center justify-center font-extrabold'>SHOP</li>
-      <li className='text-white mt-5 w-full text-center hover:scale-110 duration-1000 flex items-center justify-center font-extrabold'>contact</li>
-      <li className='text-white mt-5 w-full text-center hover:scale-110 duration-1000 flex items-center justify-center font-extrabold'>aboutdev</li>
+    <ul className=' flex flex-col items-start justify-center w-full gap-3  '>
+    <Link to="/" className="text-white hover:scale-110 duration-1000 font-extrabold">Home</Link>
+      <Link to="/shop" className="text-white hover:scale-110 duration-1000 font-extrabold">SHOP</Link>
+      <Link to="/contact" className="text-white hover:scale-110 duration-1000 font-extrabold">Contact</Link>
+      <Link to="/aboutdev" className="text-white hover:scale-110 duration-1000 font-extrabold">AboutDev</Link>
     </ul>
   </div>
      
